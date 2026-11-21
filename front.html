@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Day in One Page — Saturday 21 November 2026</title>
+<style>
+  :root {
+    --paper: #f5f0e6;
+    --ink: #16181d;
+    --muted: #4a4f59;
+    --rule: #16181d;
+    --red: #b3261e;
+    --navy: #13233f;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1024px; height: 1024px; overflow: hidden; background: var(--paper); }
+  body { font-family: Georgia, 'Times New Roman', serif; color: var(--ink); }
+  .page { position: relative; width: 1024px; height: 1024px; padding: 22px 26px 0; }
+
+  /* masthead */
+  .mast { display: flex; align-items: flex-end; justify-content: space-between; border-bottom: 6px double var(--rule); padding-bottom: 10px; }
+  .mast .name { font-family: 'Segoe UI', Arial, sans-serif; font-weight: 800; font-size: 22px; letter-spacing: 3px; color: var(--red); }
+  .mast .date { font-weight: 700; font-size: 52px; line-height: 1; letter-spacing: -0.5px; }
+  .mast .side { font-family: 'Segoe UI', Arial, sans-serif; font-size: 17px; color: var(--muted); text-align: right; line-height: 1.25; }
+
+  /* lead story */
+  .lead { display: grid; grid-template-columns: 430px 1fr; gap: 22px; padding: 14px 0 12px; border-bottom: 3px solid var(--rule); }
+  .lead svg { display: block; width: 430px; height: 286px; }
+  .tag { font-family: 'Segoe UI', Arial, sans-serif; font-weight: 800; font-size: 16px; letter-spacing: 1.5px; color: var(--red); text-transform: uppercase; }
+  .lead h1 { font-size: 62px; line-height: 0.98; margin: 6px 0 10px; letter-spacing: -1px; }
+  .lead .deck { font-size: 24px; line-height: 1.22; margin-bottom: 12px; }
+  .lead ul { list-style: none; font-family: 'Segoe UI', Arial, sans-serif; font-size: 19px; line-height: 1.22; }
+  .lead li { padding-left: 20px; position: relative; margin-bottom: 8px; }
+  .lead li::before { content: ''; position: absolute; left: 0; top: 8px; width: 10px; height: 10px; background: var(--red); }
+
+  /* story grid */
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 212px); }
+  .story { padding: 12px 16px 10px 0; border-bottom: 1px solid var(--rule); overflow: hidden; }
+  .story:not(:nth-child(3n+1)) { padding-left: 16px; border-left: 1px solid var(--rule); }
+  .story .head { display: flex; align-items: center; gap: 10px; }
+  .story svg { width: 44px; height: 44px; flex: none; }
+  .story h2 { font-size: 32px; line-height: 1.02; margin: 6px 0 8px; letter-spacing: -0.3px; }
+  .story p { font-family: 'Segoe UI', Arial, sans-serif; font-size: 18px; line-height: 1.25; color: var(--ink); }
+
+  /* briefs */
+  .briefs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; padding: 10px 0 0; }
+  .brief { font-family: 'Segoe UI', Arial, sans-serif; font-size: 16px; line-height: 1.22; padding: 0 12px; border-left: 1px solid var(--rule); }
+  .brief:first-child { border-left: 0; padding-left: 0; }
+  .brief b { display: block; color: var(--red); font-size: 14px; letter-spacing: 1.2px; margin-bottom: 2px; }
+  .foot { position: absolute; left: 0; right: 0; bottom: 0; height: 30px; background: var(--navy); color: #e9e4d8; font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; display: flex; align-items: center; justify-content: center; letter-spacing: 0.5px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="mast">
+    <div>
+      <div class="name">THE DAY IN ONE PAGE · WORLD NEWS</div>
+      <div class="date">Saturday 21 November 2026</div>
+    </div>
+    <div class="side">The world's news<br>of one day</div>
+  </header>
+
+  <section class="lead">
+    <svg viewBox="0 0 430 300" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Missiles intercepted over the Riyadh skyline at night">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#0b1430"/>
+          <stop offset="1" stop-color="#2a3a66"/>
+        </linearGradient>
+        <radialGradient id="burst">
+          <stop offset="0" stop-color="#fff6c8"/>
+          <stop offset="0.45" stop-color="#ffb43a"/>
+          <stop offset="1" stop-color="#ff6a1a" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect width="430" height="300" fill="url(#sky)"/>
+      <!-- missile tracks from the south-west, each ending in an interception -->
+      <path d="M -10 150 Q 120 40 250 70" stroke="#ffcf7a" stroke-width="3" fill="none" stroke-dasharray="2 6" stroke-linecap="round"/>
+      <path d="M -10 210 Q 140 80 330 95" stroke="#ffcf7a" stroke-width="3" fill="none" stroke-dasharray="2 6" stroke-linecap="round"/>
+      <path d="M 40 300 Q 140 120 170 105" stroke="#ffcf7a" stroke-width="3" fill="none" stroke-dasharray="2 6" stroke-linecap="round"/>
+      <!-- interceptor climbs from the ground -->
+      <path d="M 300 238 Q 290 150 250 72" stroke="#cfe4ff" stroke-width="2" fill="none"/>
+      <circle cx="250" cy="70" r="34" fill="url(#burst)"/>
+      <circle cx="330" cy="95" r="26" fill="url(#burst)"/>
+      <circle cx="170" cy="105" r="22" fill="url(#burst)"/>
+      <!-- skyline: towers, one with an arch near its top -->
+      <g fill="#05080f">
+        <rect x="0" y="250" width="430" height="50"/>
+        <rect x="20" y="222" width="40" height="40"/>
+        <rect x="66" y="205" width="26" height="60"/>
+        <rect x="98" y="228" width="50" height="40"/>
+        <path d="M 196 262 L 204 130 Q 222 120 240 130 L 248 262 Z"/>
+        <rect x="270" y="196" width="30" height="70"/>
+        <rect x="306" y="216" width="46" height="50"/>
+        <rect x="358" y="182" width="22" height="84"/>
+        <rect x="386" y="230" width="44" height="40"/>
+      </g>
+      <path d="M 208 150 Q 222 128 236 150 L 233 172 L 211 172 Z" fill="#2a3a66"/>
+      <text x="16" y="290" fill="#ffcf7a" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">RIYADH</text>
+    </svg>
+    <div>
+      <div class="tag">Middle East · Iran war</div>
+      <h1>Missiles over Riyadh</h1>
+      <p class="deck">Saudi air defences intercept three Houthi missiles aimed at the capital, the coalition says</p>
+      <ul>
+        <li>Iran says it shot down a 58th US drone over Hormuz</li>
+        <li>US naval blockade of Iran holds as Qatar mediates</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="grid">
+    <article class="story">
+      <div class="head"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="2" y="12" width="60" height="40" fill="#c8102e"/><rect x="20" y="12" width="8" height="40" fill="#fff"/><rect x="2" y="28" width="60" height="8" fill="#fff"/></svg>
+      <div class="tag">Europe · Denmark</div></div>
+      <h2>Denmark expels Russian attaché</h2>
+      <p>Cites a foiled assassination plot; halts non-essential visas for Russians</p>
+    </article>
+    <article class="story">
+      <div class="head"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M2 32 H14 L18 22 L22 44 L27 8 L32 56 L37 16 L41 40 L45 26 L49 32 H62" stroke="#b3261e" stroke-width="3.5" fill="none" stroke-linejoin="round"/></svg>
+      <div class="tag">Americas · Peru</div></div>
+      <h2>Deep quake rattles Peru</h2>
+      <p>Magnitude 6.7–6.9 in Junín, felt in Lima; no damage or deaths reported</p>
+    </article>
+    <article class="story">
+      <div class="head"><svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="#13233f" stroke-width="4" stroke-linecap="round"><path d="M32 32 m-6 0 a6 6 0 1 0 12 0 a6 6 0 1 0 -12 0"/><path d="M38 32 C 40 14, 20 6, 10 18"/><path d="M26 32 C 24 50, 44 58, 54 46"/></g></svg>
+      <div class="tag">Asia · India</div></div>
+      <h2>Cyclone Akvan weakens</h2>
+      <p>After crossing the Odisha–Andhra coast near Gopalpur; rescue teams deployed</p>
+    </article>
+    <article class="story">
+      <div class="head"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="30" cy="34" r="24" fill="#2f7d4f"/><path d="M14 26 Q24 20 30 28 T46 30 M12 42 Q24 38 32 44 T50 42" stroke="#f5f0e6" stroke-width="3" fill="none"/><circle cx="50" cy="16" r="12" fill="#f5f0e6" stroke="#16181d" stroke-width="3"/><path d="M50 9 V16 L55 19" stroke="#16181d" stroke-width="3" fill="none"/></svg>
+      <div class="tag">Climate · Türkiye</div></div>
+      <h2>COP31 talks run past deadline</h2>
+      <p>No deal yet in Antalya; countries call the draft accord “not good enough”</p>
+    </article>
+    <article class="story">
+      <div class="head"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M6 36 L58 22 L60 28 L40 36 L30 56 L24 56 L28 38 L12 42 L8 50 L4 50 Z" fill="#13233f"/><path d="M40 4 L30 22 H40 L32 40" stroke="#b3261e" stroke-width="4" fill="none" stroke-linejoin="round"/></svg>
+      <div class="tag">United States</div></div>
+      <h2>Trump fires US cyber chief</h2>
+      <p>After outages hit banks, tech and flights; he asks $50bn for air-traffic control</p>
+    </article>
+    <article class="story">
+      <div class="head"><svg viewBox="0 0 64 64" aria-hidden="true"><g transform="rotate(-35 32 32)"><rect x="8" y="22" width="48" height="20" rx="10" fill="#f5f0e6" stroke="#16181d" stroke-width="3"/><path d="M32 22 H46 A10 10 0 0 1 46 42 H32 Z" fill="#b3261e"/></g></svg>
+      <div class="tag">Health · Science</div></div>
+      <h2>Pancreatic cancer drug trial</h2>
+      <p>Daraxonrasib pill shrank tumours in 61% of 61 patients in an early study</p>
+    </article>
+  </section>
+
+  <section class="briefs">
+    <div class="brief"><b>BUSINESS</b>Lufthansa to cut 1,000 jobs at its two hubs</div>
+    <div class="brief"><b>INDIA</b>Ladakh votes in first local polls since 2019</div>
+    <div class="brief"><b>AFRICA</b>Angola buys 10% of De Beers for $180m</div>
+    <div class="brief"><b>SPORT</b>UEFA fines England's FA over fans' chants</div>
+  </section>
+
+  <div class="foot">Saturday 21 November 2026 · from reports by Anadolu, Al Jazeera, UN News, Euronews and Outlook India</div>
+</div>
+</body>
+</html>
